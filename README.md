@@ -4,7 +4,7 @@
 
 1. Abrir **start.scd**
 
-2. Luego, correr el bloque entre paréntesis
+2. Correr el bloque entre paréntesis
 
 ```SuperCollider
 (
