@@ -37,7 +37,13 @@ p.quant = 4;
 (thisProcess.nowExecutingPath.dirname ++ "/midi/midi-setup.scd").load;
 
 i.synths = i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Sounds/SynthDefs/*');
-
 // load looper synths:
 i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Looper/looper/*');
+
+// furenku:
+// i.synths = i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Sounds/SynthDefs/*');
+// // load looper synths:
+// i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Looper/looper/*');
+
+
 i.play;

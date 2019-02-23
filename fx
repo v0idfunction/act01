@@ -1,17 +1,16 @@
-
-(
 i[\vox1]=INSTRUMENT(\audioInput,autostart:true);
 
-i[\vox1].start;
-i[\vox1].autostart;
+(
+
 i[\vox1].fx=\reverb;
+i[\vox1].autostart;
 i[\vox1].fxSet(\wet,0.9);
 i[\vox1].fxSet(\room,0.9);
 i[\vox1].fxSet(\damp,0.9);
 
 )
 
-i[\vox1].start;
+i[\vox1].autostart;
 i[\vox1].stop;
 
 i[\vox1].fx=nil;
