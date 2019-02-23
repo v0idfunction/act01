@@ -12,7 +12,7 @@
 		i.midi=true;
 		midi = i.controllerManager.midi;
 
-		(thisProcess.nowExecutingPath.dirname ++ "/midimix.map.scd").load;
+		(thisProcess.nowExecutingPath.dirname ++ "/../../../midi/controllers/midimix/midimix.map.scd").load;
 
 
 		specs[ b[\name].asSymbol ] = b;
@@ -31,6 +31,7 @@
 		m=();
 
 		(thisProcess.nowExecutingPath.dirname ++ "/../../../midi/controllers/midimix/midimix.namespace.scd").load;
+
 		(thisProcess.nowExecutingPath.dirname ++ "/../../../midi/controllers/mpk_mk2/mpk_mk2.namespace.scd").load;
 
 	}});

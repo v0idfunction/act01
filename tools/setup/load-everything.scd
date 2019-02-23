@@ -1,8 +1,10 @@
 
 
 i=INSTRUMENT();
+i.kill;
+i=INSTRUMENT();
 
-i.tempo = 88;
+i.tempo = 92;
 
 ProxySpace.clearAll;
 p = ProxySpace.push(s);
@@ -18,7 +20,7 @@ p.quant = 4;
 
 ~z = {|amp=0.5| Silent.ar() ! 2  };
 
-~amp = {1/3};
+~amp = {1};
 ~mix = ~z;
 
 ~out = {
@@ -32,8 +34,10 @@ p.quant = 4;
 ~out.play;
 
 
-//(thisProcess.nowExecutingPath.dirname ++ "/midi/midi-setup.scd").load;
+(thisProcess.nowExecutingPath.dirname ++ "/midi/midi-setup.scd").load;
 
 i.synths = i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Sounds/SynthDefs/*');
 
+// load looper synths:
+i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Looper/looper/*');
 i.play;

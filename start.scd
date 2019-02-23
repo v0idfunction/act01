@@ -5,3 +5,5 @@
 )
 
 (thisProcess.nowExecutingPath.dirname ++ "/tools/setup/setup.scd").load;
+
+CountDown.new(20,10,"Total Time").play;
