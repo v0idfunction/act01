@@ -1,11 +1,13 @@
 
-i[\dis] = INSTRUMENT(\distRing);
+i[\distN] = INSTRUMENT(\distNote1);
+i[\distN].mode=\mono;
+i[\distN].clock=8;
 
-i[\dis][0].note("3 5 7").speed(2);
-i[\dis][1].note("3 5 7 11").speed(2);
-i[\dis][2].note("3 5 7").speed(4).mirror;
-i[\dis][3].note("7 11 15").speed(2);
-i[\dis][4].note("7 11 15 17").speed(16);
+i[\distN][0].note("3 5 7").speed(2);
+i[\distN][1].note("3 5 7 11").speed(2);
+i[\distN][2].note("3 5 7").speed(4).mirror;
+i[\distN][3].note("7 11 15").speed(2);
+i[\distN][4].note("7 11 15 17").speed(16);
 
 i[\kick0] = INSTRUMENT(i.synths.electro.kick);
 i[\kick0][0].seq("1").speed(2).x(8);
@@ -42,7 +44,7 @@ i[\kick].stop;
 
 
 (
-i[\dis].stop;
+i[\distN].stop;
 i[\kick].play;
 )
 
@@ -70,3 +72,8 @@ i[\hihat][1].seq("1xx :0.25 1 ").speed(2);
 i[\hihat][1].seq("1xx :0.5 1xxx ").speed(2);
 i[\hihat][2].seq("1 0.5 0.8xxx ").do(8).speed(4);
 i[\hihat][3].seq("1 :0.5 0.7xx");
+
+
+i[\kick].go(0);
+i[\hihat].go(0);
+i[\hihat2].go(0);
