@@ -34,7 +34,7 @@ p.quant = 4;
 ~out.play;
 
 
-(thisProcess.nowExecutingPath.dirname ++ "/midi/midi-setup.scd").load;
+// (thisProcess.nowExecutingPath.dirname ++ "/midi/midi-setup.scd").load;
 
 i.synths = i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Sounds/SynthDefs/*');
 // load looper synths:
