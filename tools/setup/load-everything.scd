@@ -34,17 +34,16 @@ p.quant = 4;
 ~out.play;
 
 
+
+i.synths = i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/SuperCollider/Classes/INSTRUMENT/Sounds/SynthDefs/*');
+// load looper synths:
+i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/SuperCollider/Classes/INSTRUMENT/Looper/looper/*');
+
+// // furenku:
 // (thisProcess.nowExecutingPath.dirname ++ "/midi/midi-setup.scd").load;
-
-// i.synths = i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/SuperCollider/Classes/INSTRUMENT/Sounds/SynthDefs/*');
-// load looper synths:
-// i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/SuperCollider/Classes/INSTRUMENT/Looper/looper/*');
-
-// furenku:
-(thisProcess.nowExecutingPath.dirname ++ "/midi/midi-setup.scd").load;
-i.synths = i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Sounds/SynthDefs/*');
-// load looper synths:
-i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Looper/looper/*');
+// i.synths = i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Sounds/SynthDefs/*');
+// // load looper synths:
+// i.loadSynths(Platform.userExtensionDir++'/INSTRUMENT/INSTRUMENT/Looper/looper/*');
 
 
 i.play;
